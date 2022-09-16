@@ -1,6 +1,6 @@
 sudo yum remove docker \
                   docker-client \
-                  docker-client-latest \
+                  docker-client-latest \y
                   docker-common \
                   docker-latest \
                   docker-latest-logrotate \
@@ -16,10 +16,9 @@ sudo yum-config-manager \
 sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo yum install docker-compose
 sudo yum install git 
-git clone https://github.com/airbytehq/airbyte.git
-cd airbyte
-docker compose up -d
+git clone https://github.com/apache/superset
+cd superset
+sudo service docker start
+sudo docker compose -f docker-compose-non-dev.yml up -d
 
-# http://localhost:8000
-
-
+#http://localhost:8088
