@@ -22,3 +22,4 @@ sudo service docker start
 sudo docker compose -f docker-compose-non-dev.yml up -d
 
 #http://localhost:8088
+#https://superset.apache.org/docs/databases/docker-add-drivers
